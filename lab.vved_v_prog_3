@@ -23,3 +23,172 @@ namespace Лабораторная_работа_3._1
         }
     }
 }
+
+Задание 2
+
+using System;
+
+namespace Лабораторная_работа_3._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double b;
+            double c;
+            double k;
+            double i;
+            Console.WriteLine("Bведите числа А, В и С:");
+            a = Convert.ToDouble(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
+            c = Convert.ToDouble(Console.ReadLine());
+            k = a;
+            i = b;
+            b = k;
+            k = c;
+            c = i;
+            a = k;
+            Console.WriteLine("Новые переменные А, В, C:");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+        }
+    }
+}
+
+
+Задание 3
+
+using System;
+
+namespace Лабораторная_работа_3._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double b;
+            double c;
+            double k;
+            double i;
+            Console.WriteLine("Bведите числа А, В и С:");
+            a = Convert.ToDouble(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
+            c = Convert.ToDouble(Console.ReadLine());
+            k = a;
+            i = c;
+            c = k;
+            k = b;
+            b = i;
+            a = k;
+            Console.WriteLine("Новые переменные А, В, C:");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+        }
+    }
+}
+
+
+
+Задание 4
+
+using System;
+
+namespace Лабораторная_работа_3._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x;
+            double y;
+            
+            Console.WriteLine("Bведите x:");
+            x = Convert.ToDouble(Console.ReadLine());
+            y = 3*x*x*x*x*x*x-6*x*x-7;
+            Console.WriteLine("Значение функции равно:");
+            Console.WriteLine(y);
+        }
+    }
+
+}
+
+
+Задание 5
+
+using System;
+
+namespace Лабораторная_работа_3._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x;
+            double y;
+            double i;
+            Console.WriteLine("Bведите x:");
+            x = Convert.ToDouble(Console.ReadLine());
+            i = (x-3)*(x-3)*(x-3);
+            y = 4*i*i-7*i+2;
+            Console.WriteLine("Значение функции равно:");
+            Console.WriteLine(y);
+        }
+    }
+
+}
+
+
+Задание 6
+
+using System;
+
+namespace Лабораторная_работа_3._6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double i;
+            Console.WriteLine("Bведите A:");
+            a = Convert.ToDouble(Console.ReadLine());
+            i = a*a;
+            i = i*i;
+            i = i*i;
+            Console.WriteLine("Значение функции равно:");
+            Console.WriteLine(i);
+        }
+    }
+
+}
+
+Задание 7
+
+using System;
+
+namespace Лабораторная_работа_3._7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double i;
+            double k;      
+            Console.WriteLine("Bведите A:");
+            a = Convert.ToDouble(Console.ReadLine());
+            i = a*a*a;
+            k = i*i;
+            k = k*k;
+            i = k*i;
+            Console.WriteLine("Значение функции равно:");
+            Console.WriteLine(i);
+        }
+    }
+
+}
+
