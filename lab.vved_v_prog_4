@@ -1,0 +1,22 @@
+Задание 1
+
+using System;
+
+namespace Лабораторная_работа_4._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double i;   
+            Console.WriteLine("Bведите A:");
+            a = Convert.ToDouble(Console.ReadLine());
+            i = Math.PI/180;
+            a = a*i;
+            Console.WriteLine("Угол А в радианах равен:");
+            Console.WriteLine(a);
+        }
+    }
+
+}
