@@ -1,0 +1,25 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_3._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double b;
+            double c;
+
+            Console.WriteLine("Bведите числа А и В:");
+            a = Convert.ToDouble(Console.ReadLine());
+            b = Convert.ToDouble(Console.ReadLine());
+            c = a;
+            a = b;
+            b = c;
+            Console.WriteLine("Новые переменные А и В:");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+        }
+    }
+}
