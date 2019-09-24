@@ -20,3 +20,145 @@ namespace Лабораторная_работа_4._1
     }
 
 }
+
+Задание 2
+
+using System;
+
+namespace Лабораторная_работа_4._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double i;   
+            Console.WriteLine("Bведите A:");
+            a = Convert.ToDouble(Console.ReadLine());
+            i = Math.PI/180;
+            a = a/i;
+            Console.WriteLine("Угол А в градусах равен:");
+            Console.WriteLine(a);
+        }
+    }
+
+}
+
+Задание 3
+
+using System;
+
+namespace Лабораторная_работа_4._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a;
+            double x;
+            double y;   
+            Console.WriteLine("Bведите количество кг и цену, а также количество кг, цену которых хотите узнать:");
+            x = Convert.ToDouble(Console.ReadLine());
+            a = Convert.ToDouble(Console.ReadLine());
+            y = Convert.ToDouble(Console.ReadLine());
+            a = a/x;
+            y = y*a;
+            Console.WriteLine("Цена за килограмм");
+            Console.WriteLine(a);
+            Console.WriteLine("Цена за указанное число килограмм");
+            Console.WriteLine(y);
+        }
+    }
+
+}
+
+Задание 4
+using System;
+
+namespace Лабораторная_работа_4._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double s;
+            double v1;
+            double v2;
+            double t;
+            Console.WriteLine("Bведите изначальное расстояние между машинами, скорость первой и второй машины, время через которое нужно узнать расстояниемежду машинами (в часах) :");
+            s = Convert.ToDouble(Console.ReadLine());
+            v1 = Convert.ToDouble(Console.ReadLine());
+            v2 = Convert.ToDouble(Console.ReadLine());
+            t = Convert.ToDouble(Console.ReadLine());
+            s = s+(v1+v2)*t;
+            Console.WriteLine("расстояние между машинами:");
+            Console.WriteLine(s);
+        }
+    }
+
+}
+
+
+Задание 5
+
+using System;
+
+namespace Лабораторная_работа_4._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double x;
+            double A;
+            double B;
+            Console.WriteLine("Введите коэффициенты А и В");
+            A = Convert.ToDouble(Console.ReadLine());
+            B = Convert.ToDouble(Console.ReadLine());
+            x = -(B/A);
+            Console.WriteLine("Корень уравнения:");
+            Console.WriteLine(x);
+        }
+    }
+
+}
+
+
+Задание 6
+using System;
+
+namespace Лабораторная_работа_4._6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double C1;
+            double A1;
+            double B1;
+            double C2;
+            double A2;
+            double B2;     
+            double d;
+            double d1;
+            double d2; 
+            double x;
+            double y;                              
+            Console.WriteLine("Введите коэффициенты A1,B1,C1,A2,B2,C2");
+            A1 = Convert.ToDouble(Console.ReadLine());
+            B1 = Convert.ToDouble(Console.ReadLine());
+            C1 = Convert.ToDouble(Console.ReadLine());
+            A2 = Convert.ToDouble(Console.ReadLine());
+            B2 = Convert.ToDouble(Console.ReadLine());
+            C2 = Convert.ToDouble(Console.ReadLine());
+            d = A1*B2-A2*B1;
+            d1= C1*B2-C2*B1;
+            d2= A1*C2-A2*C1;
+            x = d1/d;
+            y = d2/d;
+            Console.WriteLine("Решение системы");
+            Console.WriteLine(x+";"+y);
+        }
+    }
+
+}
