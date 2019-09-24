@@ -1,0 +1,87 @@
+using System;
+
+namespace Лабораторная_работа_5_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+       double b;
+       double k;
+       Console.WriteLine("Bведите размер файла в байтах");
+       b = Convert.ToDouble(Console.ReadLine());
+       k = b / 1024;
+       k = Convert.ToInt32(k);
+       Console.WriteLine("Pазмер файла в килобайтах:");
+       Console.WriteLine(k);
+
+        }
+    }
+}
+
+using System;
+
+namespace Лабораторная_работа_5_2
+{
+    class Program
+    {
+       Console.WriteLine("введите длины отрезков А и В");
+int A = int.Parse(Console.ReadLine());
+int B = int.Parse(Console.ReadLine());
+int C = A / B;
+Console.WriteLine("максимально возможное количество отрезков длины B "+ C);
+
+        }
+    }
+}
+
+using System;
+
+namespace Лабораторная_работа_5_3
+{
+    class Program
+    {
+       Console.WriteLine("введите длины отрезков А и В");
+int A = int.Parse(Console.ReadLine());
+int B = int.Parse(Console.ReadLine());
+int C = A / B;
+int D = A - (C*B);
+Console.WriteLine("остаток "+ D);
+
+        }
+    }
+}
+
+using System;
+
+namespace Лабораторная_работа_5_4
+{
+    class Program
+    {
+       Console.WriteLine("введите двузначное число");
+int A = int.Parse(Console.ReadLine());
+int B = A % 10;
+int C = A / 10;
+A = B * 10 + C;
+Console.WriteLine("новоечисло "+ A);
+
+        }
+    }
+}
+using System;
+
+namespace Лабораторная_работа_5_5
+{
+    class Program
+    {
+Console.WriteLine("введите трехзначное число");
+int A = int.Parse(Console.ReadLine());
+int D = A / 100;
+int C = (A / 10)%10;
+int B = A % 10;
+            A = B * 10 + C*100 + D;
+Console.WriteLine("новоечисло "+ A);
+
+        }
+    }
+}
