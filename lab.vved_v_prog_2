@@ -1,0 +1,122 @@
+using System;
+
+namespace Лабораторная_работа_2_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          double x1, x2, y1, y2, R;
+         Console.WriteLine("Введите координаты x1, y1, x2, y2 ");       
+         x1 = Convert.ToDouble (Console.ReadLine());
+         y1 = Convert. ToDouble (Console.ReadLine());
+         x2 = Convert.ToDouble (Console.ReadLine());
+         y2 = Convert.ToDouble (Console.ReadLine());
+
+         Console.Write("Растояние между точками: ");
+         R = Math.Sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+         Console.WriteLine(R);
+
+        }
+    }
+}
+using System;
+
+namespace Лабораторная_работа_2_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          double A, B, C, S, AC,BC;
+         Console.WriteLine("Введите координаты A,B,C ");       
+         A = Convert.ToDouble (Console.ReadLine());
+         B = Convert.ToDouble (Console.ReadLine());
+         C = Convert.ToDouble (Console.ReadLine());
+         Console.Write("Длина AC: ");
+         AC = Math.Abs(C-A);
+         Console.WriteLine(AC);
+         Console.Write("Длина BC: ");
+         BC = Math.Abs(C-B);
+         Console.WriteLine(BC);
+         Console.Write("Сумма АВ и ВС: ");
+         S = AC+BC;
+         Console.WriteLine(S);
+        }
+    }
+}using System;
+
+namespace Лабораторная_работа_2_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          double A, B, C, S, AC,BC;
+         Console.WriteLine("Введите координаты A,B,C ");       
+         A = Convert.ToDouble (Console.ReadLine());
+         B = Convert.ToDouble (Console.ReadLine());
+         C = Convert.ToDouble (Console.ReadLine());
+         Console.Write("Длина AC: ");
+         AC = Math.Abs(C-A);
+         Console.WriteLine(AC);
+         Console.Write("Длина BC: ");
+         BC = Math.Abs(C-B);
+         Console.WriteLine(BC);
+         Console.Write("Произведение АВ и ВС: ");
+         S = AC*BC;
+         Console.WriteLine(S);
+        }
+    }
+}
+using System;
+
+namespace Лабораторная_работа_2_4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          double x1, x2, y1, y2, P, S;
+         Console.WriteLine("Введите координаты x1, y1, x2, y2 ");       
+         x1 = Convert.ToDouble (Console.ReadLine());
+         y1 = Convert.ToDouble (Console.ReadLine());
+         x2 = Convert.ToDouble (Console.ReadLine());
+         y2 = Convert.ToDouble (Console.ReadLine());
+
+         Console.Write("Периметр прямугольника: ");
+         P = 2*(Math.Abs(x2-x1)+Math.Abs(y2-y1));
+         Console.WriteLine(P);
+         Console.Write("Площадь прямоугольника: ");
+         S = Math.Abs(x2-x1)*Math.Abs(y2-y1);
+         Console.WriteLine(S);
+        }
+    }
+}
+using System;
+
+namespace Лабораторная_работа_2_5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          double x1, x2, y1, y2, x3, y3, P, S;
+         Console.WriteLine("Введите координаты x1, y1, x2, y2, x3, y3 ");       
+         x1 = Convert.ToDouble(Console.ReadLine());
+         y1 = Convert.ToDouble(Console.ReadLine());
+         x2 = Convert.ToDouble(Console.ReadLine());
+         y2 = Convert.ToDouble(Console.ReadLine());
+         x3 = Convert.ToDouble(Console.ReadLine());
+         y3 = Convert.ToDouble(Console.ReadLine());
+         Console.Write("Периметр треугольника: ");
+         P = Math.Sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2))+Math.Sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3))+Math.Sqrt((x3-x1)*(x3-x1)+(y3-y1)*(y3-y1));
+         Console.WriteLine(P);
+         Console.Write("Площадь треугольника: ");
+         S = Math.Sqrt((P/2)*((P/2)-Math.Sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)))*((P/2)-Math.Sqrt((x2-x3)*(x2-x3)+(y2-y3)*(y2-y3)))*((P/2)-Math.Sqrt((x3-x1)*(x3-x1)+(y3-y1)*(y3-y1))));
+         Console.WriteLine(S);
+        }
+    }
+}
+
+
