@@ -1,0 +1,129 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_6._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double N;  
+            Console.WriteLine("Bведите число секунд :");
+            N = Convert.ToDouble(Console.ReadLine());
+            N = N%60;
+            Console.WriteLine("Количество секунд от начала минуты");
+            Console.WriteLine(N);
+        }
+    }
+
+}
+Задание 2
+using System;
+
+namespace Лабораторная_работа_6._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double N;  
+            Console.WriteLine("Bведите номер дня :");
+            N = Convert.ToDouble(Console.ReadLine());
+            if (N>6)
+            {
+            N = N%7;
+            Console.WriteLine("Номер дня недели:");
+            Console.WriteLine(N);
+            }
+            if (N<7)
+            {
+            Console.WriteLine("Номер дня недели:");
+            Console.WriteLine(N);
+            }
+        }
+    }
+
+}
+
+Задание 3
+using System;
+
+namespace Лабораторная_работа_6._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double N;  
+            double K;  
+            Console.WriteLine("Bведите номер дня и целое число, с номера которого начнется год:");
+            N = Convert.ToDouble(Console.ReadLine());
+            K = Convert.ToDouble(Console.ReadLine());
+            if (K>7)
+            {
+            K = (K+N)%7;
+            Console.WriteLine("Номер дня недели:");
+            Console.WriteLine(K);
+            }
+            if (K<8)
+            {
+            Console.WriteLine("Номер дня недели:");
+            if (K>N) {
+            K = K-N;}
+            if (K<N) {
+            K = (K+N)%7;}  
+            if (K==0)
+            {K=7;}          
+            Console.WriteLine(K);
+            }
+        }
+    }
+
+}
+
+Задание 4
+ using System;
+
+namespace Лабораторная_работа_6._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;  
+            int B;  
+            int C;
+            int D;
+            Console.WriteLine("Bведите А, В, С:");
+            A = Convert.ToInt32(Console.ReadLine());
+            B = Convert.ToInt32(Console.ReadLine());
+            C = Convert.ToInt32(Console.ReadLine());
+            D = A*B;
+            A = A/C;
+            B = B/C;
+            Console.WriteLine("Количество квадратов: "+A*B );
+            Console.WriteLine( "Площадь незакрашенной части: "+ (D-(A*B*C*C)));           
+        }
+    }
+}
+
+Задание 5
+using System;
+
+namespace Лабораторная_работа_6._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int N;  
+            Console.WriteLine("Bведите год:");
+            N = Convert.ToInt32(Console.ReadLine());
+            if (N%100>0)
+            {N = N/100+1;}
+            if (N%100==0)
+            {N = N/100;}
+            Console.WriteLine("Век: "+N );
+        }
+    }
+}
