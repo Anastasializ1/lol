@@ -1,0 +1,155 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_7._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;  
+            int B; 
+            Console.WriteLine("Введите значения А и В:");
+            A = Convert.ToInt32(Console.ReadLine());
+            B = Convert.ToInt32(Console.ReadLine());
+            if (A>2 && B<=3)
+            {Console.WriteLine("Неравенство справедливо");}
+            else
+            {Console.WriteLine("Неравенство не справедливо");}
+        }
+    }
+}
+
+Задание 2
+using System;
+
+namespace Лабораторная_работа_7._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;  
+            int B; 
+            int C; 
+            Console.WriteLine("Введите значения А, В, С:");
+            A = Convert.ToInt32(Console.ReadLine());
+            B = Convert.ToInt32(Console.ReadLine());
+            C = Convert.ToInt32(Console.ReadLine());
+            if (A<B && B<C)
+            {Console.WriteLine("Неравенство справедливо");}
+            else
+            {Console.WriteLine("Неравенство не справедливо");}
+        }
+    }
+}
+
+Задание 3
+using System;
+
+namespace Лабораторная_работа_7._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;   
+            Console.WriteLine("Введите значение числа:");
+            A = Convert.ToInt32(Console.ReadLine());
+            if ((A/100)==0 && (A%2)==0)
+            {Console.WriteLine("Число четное двузначное");}
+            else
+            {Console.WriteLine("Число не удовлетворяет условию");}
+        }
+    }
+}
+
+Задание 4
+using System;
+
+namespace Лабораторная_работа_7._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;   
+            Console.WriteLine("Введите трехзначное число:");
+            A = Convert.ToInt32(Console.ReadLine());
+            if ((A%10)<(A%100/10) && (A%100/10)<(A/100))
+            {Console.WriteLine("Число с убывающей последовательностью");}
+            if ((A%10)>(A%100/10) && (A%100/10)>(A/100))
+            {Console.WriteLine("Число с возрастающей последовательностью");}
+            if (((A%10)>(A%100/10) && (A%100/10)<(A/100)) || (((A%10)<(A%100/10) && (A%100/10)>(A/100))) || (((A%10)==(A%100/10) && (A%100/10)<(A/100))) || (((A%10)==(A%100/10) && (A%100/10)>(A/100))) || (((A%10)>(A%100/10) && (A%100/10)==(A/100))) || (((A%10)<(A%100/10) && (A%100/10)==(A/100))) || (((A%10)==(A%100/10) && (A%100/10)==(A/100))))
+            {Console.WriteLine("Число без последовательности");} 
+        }
+    }
+}
+
+Задание 5
+using System;
+
+namespace Лабораторная_работа_7._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;   
+            Console.WriteLine("Введите четырехзначное число:");
+            A = Convert.ToInt32(Console.ReadLine());
+            if (((A/1000)==(A%10)) && (((A/100)%10)==((A%100)/10)))
+            {Console.WriteLine("Число палиндром");}
+            else
+            {Console.WriteLine("Число не палиндром");} 
+        }
+    }
+}
+
+Задание 6
+using System;
+
+namespace Лабораторная_работа_7._6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            int B;               
+            int C;   
+            Console.WriteLine("Введите стороны треугольника:");
+            A = Convert.ToInt32(Console.ReadLine());
+            B = Convert.ToInt32(Console.ReadLine());
+            C = Convert.ToInt32(Console.ReadLine());
+            if (((A<(B+C))) && (B<(A+C)) && (C<(A+B)) && ((A*A==B*B+C*C) || (B*B==A*A+C*C) || (C*C==A*A+B*B)))
+            {Console.WriteLine("Треугольник существует и он прямоугольный");}
+            else
+            {Console.WriteLine("Треугольник не существует или не прямоугольный");} 
+        }
+    }
+}
+
+Задание 7
+using System;
+
+namespace Лабораторная_работа_7._7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int A;
+            int B;               
+            int C;   
+            Console.WriteLine("Введите стороны треугольника:");
+            A = Convert.ToInt32(Console.ReadLine());
+            B = Convert.ToInt32(Console.ReadLine());
+            C = Convert.ToInt32(Console.ReadLine());
+            if (((A<(B+C))) && (B<(A+C)) && (C<(A+B)))
+            {Console.WriteLine("Треугольник существует");}
+            else
+            {Console.WriteLine("Треугольник не существует");} 
+        }
+    }
+}
