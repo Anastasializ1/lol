@@ -168,7 +168,26 @@ namespace Лабораторная_работа_9._4
     }
 }
 Задание 5
-
+using System;
+namespace Лабораторная_работа_9._5
+class MainClass {
+  public static void Main (string[] args) {
+     int d;
+     int m;
+     var c;
+     Console.WriteLine("Введите год");
+     d = Convert.ToInt32(Console.ReadLine());
+     d = d-3;
+     m = (d%60)/12;
+      if (m==0) {c=0} // 'зеленый'
+      if (m==1) {c=1} //'красный'
+      if (m==2) {c=2} //'желтый'
+      if (m==3) {c=3} //'белый '
+      if (m==4) {c=4} //'черный'
+     d=(d%60)%12
+    Console.WriteLine ("Hello World");
+  }
+}
 Задание 6
 
 Задание 7
