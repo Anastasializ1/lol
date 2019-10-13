@@ -169,25 +169,44 @@ namespace Лабораторная_работа_9._4
 }
 Задание 5
 using System;
+
 namespace Лабораторная_работа_9._5
-class MainClass {
-  public static void Main (string[] args) {
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
      int d;
      int m;
-     var c;
      Console.WriteLine("Введите год");
      d = Convert.ToInt32(Console.ReadLine());
+     Console.Write ("Год ");
      d = d-3;
      m = (d%60)/12;
-      if (m==0) {c=0} // 'зеленый'
-      if (m==1) {c=1} //'красный'
-      if (m==2) {c=2} //'желтый'
-      if (m==3) {c=3} //'белый '
-      if (m==4) {c=4} //'черный'
-     d=(d%60)%12
-    Console.WriteLine ("Hello World");
-  }
+     d=(d%60)%12; 
+    if (d==1 ||d==2 ||d==6 ||d==7 ||d==8 ||d==9 ||d==10 ||d==11 ||d==0) { if (m==0) {Console.Write (" зеленой ");} 
+      if (m==1) {Console.Write (" красной ");}
+      if (m==2) {Console.Write ("желтой ");} 
+      if (m==3) {Console.Write ("белой ");} 
+      if (m==4) {Console.Write ("черной ");} }
+    if (d== 3||d==4 ||d==5) 
+    { if (m==0) {Console.Write (" зеленого ");} 
+      if (m==1) {Console.Write (" красного ");}
+      if (m==2) {Console.Write ("желтого ");} 
+      if (m==3) {Console.Write ("белого ");} 
+      if (m==4) {Console.Write ("черного ");} }
+    if (d==1) {Console.Write ("крысы ");}
+    if (d==2) {Console.Write ("коровы ");} 
+    if (d==3) {Console.Write ("тигра ");} 
+    if (d==4) {Console.Write ("зайца ");} 
+    if (d==5) {Console.Write ("дракона ");}
+    if (d==6) {Console.Write ("змеи ");} 
+    if (d==7) {Console.Write ("лошади ");} 
+    if (d==8) {Console.Write ("овцы ");} 
+    if (d==9) {Console.Write ("обезьяны ");}
+    if (d==10) {Console.Write ("курицы ");} 
+    if (d==11) {Console.Write ("собаки ");} 
+    if (d==0) {Console.Write ("свиньи ");} 
+        }
+   }
 }
-Задание 6
-
-Задание 7
