@@ -60,7 +60,39 @@ namespace Лабораторная_работа_9._1
 }
 
 Задание 2
+using System;
 
+namespace Лабораторная_работа_9._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+              char S;
+              int N;
+              Console.WriteLine("Введите символ направления («С» — север, «З» — запад, «Ю» — юг, «В» — восток): ");
+              S = Convert.ToChar(Console.ReadLine());
+              Console.WriteLine("Введите цифровую команду для робота (0 — продолжать движение, 1 — поворот налево, -1 — поворот направо):");
+              N = Convert.ToInt32(Console.ReadLine());
+             if (N==0) {
+               if (S=='С') {S='С';}
+               if (S=='Ю') {S='Ю';}
+               if (S=='З') {S='З';}
+               if (S=='В') {S='В';}} 
+             if (N==1) {
+               if (S=='С') {S='З';}
+               if (S=='Ю') {S='В';}
+               if (S=='З') {S='Ю';}
+               if (S=='В') {S='С';}}
+             if (N==-1) {
+               if (S=='С') {S='В';}
+               if (S=='Ю') {S='З';}
+               if (S=='З') {S='С';}
+               if (S=='В') {S='Ю';}}
+             Console.WriteLine(S);   
+        }    
+    }
+}    
 
 Задание 3
 using System;
