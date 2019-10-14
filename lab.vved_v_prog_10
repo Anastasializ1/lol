@@ -1,0 +1,24 @@
+using System;
+
+namespace Лабораторная_работа_10._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+              int S;
+              int N;
+              Console.WriteLine("Введите стоимость за килограмм ");
+              S = Convert.ToInt32(Console.ReadLine());
+              Console.WriteLine("Стоимость 100 гр: "+ (S*0.1));
+              Console.WriteLine("Стоимость 200 гр: "+ (S*0.2));
+              Console.WriteLine("Стоимость 300 гр: "+ (S*0.3));
+              Console.WriteLine("Стоимость 400 гр: "+ (S*0.4));
+              Console.WriteLine("Стоимость 500 гр: "+ (S*0.5));
+              Console.WriteLine("Стоимость 600 гр: "+ (S*0.6));
+              Console.WriteLine("Стоимость 700 гр: "+ (S*0.7));
+              Console.WriteLine("Стоимость 800 гр: "+ (S*0.8));
+              Console.WriteLine("Стоимость 900 гр: "+ (S*0.9));
+        }    
+    }
+}    
