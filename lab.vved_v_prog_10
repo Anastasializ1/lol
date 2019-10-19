@@ -91,3 +91,25 @@ namespace Лабораторная_работа_10._4
     }
 }    
 Задание 5
+using System;
+
+namespace Лабораторная_работа_10._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int  n;
+         double s, a, k;
+         Console.WriteLine("Введите A ");
+         a = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("Введите N ");
+         n = Convert.ToInt32(Console.ReadLine());         
+         k=0; 
+         s=0;
+         while (k<=n)
+          {s=s+Math.Pow((a*(-1)),k); k=k+1;}
+         Console.WriteLine(s);
+        }
+    }
+}    
