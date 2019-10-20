@@ -1,0 +1,137 @@
+Задание 1
+
+using System;
+
+namespace Лабораторная_работа_8._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          int a, b;
+         Console.WriteLine("Введите A ");
+         a = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("Введите B ");
+         b = Convert.ToInt32(Console.ReadLine());
+         if (b==a||b==a){a=0; b=0;};
+         if (a>b){b=a;};
+         if (b>a){a=b;};
+         Console.WriteLine(" A "+a);
+         Console.WriteLine(" B "+b);
+        }
+    }
+}
+
+Задание 2
+using System;
+
+namespace Лабораторная_работа_8._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          int a, b, c, s;
+         Console.WriteLine("Введите A ");
+         a = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("Введите B ");
+         b = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("Введите С ");
+         c = Convert.ToInt32(Console.ReadLine());
+         s=0;
+            if ((a < b) && (a < c)) s = b + c;
+            if ((b < a) && (b < c)) s = a + c;
+            if ((c < a) && (c < b)) s = a + b;
+ 
+            Console.WriteLine("Сумма " + s);
+        }
+    }
+}
+Задание 3
+using System;
+
+namespace Лабораторная_работа_8._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          double xa,ya, xb,yb, xc, yc, sab, sac;
+         Console.WriteLine("Введите координаты A ");
+         xa = Convert.ToDouble(Console.ReadLine());
+         ya = Convert.ToDouble(Console.ReadLine());
+         Console.WriteLine("Введите координаты  B ");
+         xb = Convert.ToDouble(Console.ReadLine());
+         yb = Convert.ToDouble(Console.ReadLine());
+         Console.WriteLine("Введите координаты  С ");
+         xc = Convert.ToDouble(Console.ReadLine());
+         yc = Convert.ToDouble(Console.ReadLine());
+         sab=Math.Sqrt((xa-xb)*(xa-xb)+(ya-yb)*(ya-yb));
+         sac=Math.Sqrt((xa-xc)*(xa-xc)+(ya-yc)*(ya-yc));
+         if (sab==sac) { Console.WriteLine("Расстояния равны " + sac);}
+         if (sab<sac) { Console.WriteLine("B " + sab);}
+         if (sab>sac) { Console.WriteLine("C " + sac);}
+
+        }
+    }
+}
+Задание 4
+using System;
+
+namespace Лабораторная_работа_8._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        	double x, y;
+	        Console.WriteLine("Введите координаты ");       
+	        x = Convert.ToDouble (Console.ReadLine());
+	        y = Convert. ToDouble (Console.ReadLine());
+	        if (x>0 && y>0) {Console.WriteLine("Первая четверть" );}
+	      	if (x>0 && y<0) {Console.WriteLine("Четвертая четверть" );}
+	      	if (x<0 && y>0) {Console.WriteLine("Вторая четверть" );}
+		      if (x<0 && y<0) {Console.WriteLine("Третья четверть" );}
+        }
+    }
+}
+Задание 5
+using System;
+
+namespace Лабораторная_работа_8._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+      double x;
+      Console.WriteLine("Введите число ");       
+       x = Convert.ToDouble (Console.ReadLine());
+       if (x>0) {Console.Write("положительное " );}
+       if (x<0) {Console.Write("отрицательное " );}
+       if (x%2==0 && x!=0) {Console.WriteLine("чётное число" ); }
+       if ((x%2)!=0) {Console.WriteLine("нечётное число" ); }
+       if (x==0) { Console.WriteLine("нулевое чсило " );} 
+        }
+    }
+}
+Задание 6
+using System;
+
+namespace Лабораторная_работа_8._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+      double x;
+       Console.WriteLine("Введите число ");       
+       x = Convert.ToDouble (Console.ReadLine());
+       if (x%2==1) {Console.Write("Нечетное " );}
+       if (x%2==0) {Console.Write("Четное " );}
+       if (x<10) {Console.WriteLine(" однозначное" ); }
+       if (x<100 && x>9) {Console.WriteLine(" двузначное" ); }
+       if (x>99) { Console.WriteLine(" трехзначное " );} 
+        }
+    }
+}
