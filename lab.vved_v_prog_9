@@ -60,6 +60,7 @@ namespace Лабораторная_работа_9._1
 }
 
 Задание 2
+
 using System;
 
 namespace Лабораторная_работа_9._2
@@ -68,28 +69,29 @@ namespace Лабораторная_работа_9._2
     {
         static void Main(string[] args)
         {
-              char S;
+              char S, k;
               int N;
               Console.WriteLine("Введите символ направления («С» — север, «З» — запад, «Ю» — юг, «В» — восток): ");
               S = Convert.ToChar(Console.ReadLine());
               Console.WriteLine("Введите цифровую команду для робота (0 — продолжать движение, 1 — поворот налево, -1 — поворот направо):");
               N = Convert.ToInt32(Console.ReadLine());
+              k='J';
              if (N==0) {
-               if (S=='С') {S='С';}
-               if (S=='Ю') {S='Ю';}
-               if (S=='З') {S='З';}
-               if (S=='В') {S='В';}} 
+               if (S=='С') {k='С';}
+               if (S=='Ю') {k='Ю';}
+               if (S=='З') {k='З';}
+               if (S=='В') {k='В';}} 
              if (N==1) {
-               if (S=='С') {S='З';}
-               if (S=='Ю') {S='В';}
-               if (S=='З') {S='Ю';}
-               if (S=='В') {S='С';}}
+               if (S=='С') {k='З';}
+               if (S=='Ю') {k='В';}
+               if (S=='З') {k='Ю';}
+               if (S=='В') {k='С';}}
              if (N==-1) {
-               if (S=='С') {S='В';}
-               if (S=='Ю') {S='З';}
-               if (S=='З') {S='С';}
-               if (S=='В') {S='Ю';}}
-             Console.WriteLine(S);   
+               if (S=='С') {k='В';}
+               if (S=='Ю') {k='З';}
+               if (S=='З') {k='С';}
+               if (S=='В') {k='Ю';}}
+             Console.WriteLine(k);   
         }    
     }
 }    
