@@ -67,5 +67,30 @@ namespace Лабораторная_работа_12._3
     }
  }  
 Задание 4
+using System;
 
+namespace Лабораторная_работа_12._4
+{
+    class Program
+    {
+       static double Quarter(double x,double y)
+        {
+	        if (x>0 && y>0) {x=1;};
+	      	if (x>0 && y<0) {x=4;};
+	      	if (x<0 && y>0) {x=2;};
+		      if (x<0 && y<0) {x=3;};
+          return x;
+        }
+        static void Main(string[] args)
+          {
+            double a,b,m;
+            Console.WriteLine ("Введите x ");
+            a = Convert.ToDouble(Console.ReadLine ());
+            Console.WriteLine ("Введите y ");
+            b = Convert.ToDouble(Console.ReadLine ());
+            m= Quarter(a,b);
+            Console.WriteLine(m);
+          }
+    }
+ }    
 Задание 5
