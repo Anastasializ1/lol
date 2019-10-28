@@ -94,3 +94,29 @@ namespace Лабораторная_работа_12._4
     }
  }    
 Задание 5
+using System;
+
+namespace Лабораторная_работа_12._5
+{
+    class Program
+    {
+       static double Fact2(double N)
+        {
+          double A=1;
+          double a=3; 
+          double b=2;
+	        if (N%2==1) {while (a<=N) {A=A*a; a=a+2;} };
+	      	if (N%2==0) {while (b<=N) {A=A*b; b=b+2;} }; 
+          N=A;
+          return N;
+        }
+        static void Main(string[] args)
+          {
+            double k;
+            Console.WriteLine ("Введите число ");
+            k = Convert.ToDouble(Console.ReadLine ());
+            k=Fact2(k);
+            Console.WriteLine(k);
+          }
+    }
+ }    
