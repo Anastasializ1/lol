@@ -1,0 +1,71 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_12._1
+{
+    class Program
+    {
+       static void PowerA3(double A, out double B)
+        {
+            B = A * A * A;
+        }
+        static void Main(string[] args)
+          {
+            double b,a;
+            Console.WriteLine ("Введите число ");
+            a = Convert.ToDouble (Console.ReadLine ());
+            PowerA3(a, out b);
+            Console.WriteLine(b);
+            }
+    }
+ }   
+Задание 2
+using System;
+
+namespace Лабораторная_работа_12._2
+{
+    class Program
+    {
+       static double Sign(double X)
+        {
+          if (X>0) {X=1;};
+          if (X<0) {X=-1;};
+          if (X==0) {X=0;};
+          return X;
+        }
+        static void Main(string[] args)
+          {
+            double a;
+            Console.WriteLine ("Введите число ");
+            a = Convert.ToDouble(Console.ReadLine ());
+            a=Sign(a);
+            Console.WriteLine(a);
+          }
+    }
+ }    
+Задание 3
+using System;
+
+namespace Лабораторная_работа_12._3
+{
+    class Program
+    {
+       static void RingS(double R1, double R2, out double S)
+        {
+          S= Math.PI*(R1*R1-R2*R2);
+        }
+        static void Main(string[] args)
+          {
+            double b,a, r;
+            Console.WriteLine ("Введите радиус 1 ");
+            a = Convert.ToDouble (Console.ReadLine ());
+            Console.WriteLine ("Введите радиус 2 ");
+            b = Convert.ToDouble (Console.ReadLine ());            
+            RingS(a,b, out r);
+            Console.WriteLine(r);
+            }
+    }
+ }  
+Задание 4
+
+Задание 5
