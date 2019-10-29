@@ -35,11 +35,15 @@ namespace Лабораторная_работа_12._2
         }
         static void Main(string[] args)
           {
-            double a;
-            Console.WriteLine ("Введите число ");
+            double a, b, c;
+            Console.WriteLine ("Введите число А ");
             a = Convert.ToDouble(Console.ReadLine ());
             a=Sign(a);
-            Console.WriteLine(a);
+            Console.WriteLine ("Введите число В ");
+            b = Convert.ToDouble(Console.ReadLine ());
+            b=Sign(b);
+            c=a+b;
+            Console.WriteLine(c);
           }
     }
  }    
