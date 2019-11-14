@@ -1,0 +1,136 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_13._1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int b,a;
+         Console.WriteLine ("Введите размер массива ");
+         a = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[a];
+         b=1;
+         array1[0]=1;
+         while (b<=a-1) {array1[b]=(array1[b-1]+2); b++;};
+         b=0;
+         while (b<=a-1) {Console.WriteLine(array1[b]);b++;};
+        
+        }
+    }
+}    
+
+Задание 2
+using System;
+
+namespace Лабораторная_работа_13._2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int b,q,n;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите первый член прогрессии ");
+         array1[0] = Convert.ToInt32 (Console.ReadLine ());
+         Console.WriteLine ("Введите знаменатель прогрессии ");
+         q = Convert.ToInt32 (Console.ReadLine ());
+         b=1;
+         while (b<=n-1) {array1[b]=(array1[b-1]*q); b++;};
+         b=0;
+         while (b<=n-1) {Console.WriteLine(array1[b]);b++;};
+        
+        }
+    }
+}    
+
+Задание 3
+using System;
+
+namespace Лабораторная_работа_13._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int b,n;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите первый член массива ");
+         array1[0] = Convert.ToInt32 (Console.ReadLine ());
+         Console.WriteLine ("Введите второй член массива ");
+         array1[1] = Convert.ToInt32 (Console.ReadLine ());
+         b=2;
+         while (b<=n-1) {array1[b]=(array1[b-1]+array1[b-2]); b++;};
+         b=0;
+         while (b<n) {Console.WriteLine(array1[b]);b++;};
+        }
+    }
+}    
+
+Задание 4
+using System;
+
+namespace Лабораторная_работа_13._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int b,n;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите элементы массива ");
+         b=0; 
+         while (b<=n-1) {array1[b]=Convert.ToInt32 (Console.ReadLine ()); b++;};
+         b=0;
+         while (b<=n-1) {
+         if (b%2==1) {Console.WriteLine(array1[n-b]);};
+         if (b%2==0) {Console.WriteLine(array1[b]);};
+         b++;
+         }
+        }
+    }
+}    
+
+Задание 5
+using System;
+
+namespace Лабораторная_работа_13._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int b,n;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите элементы массива ");
+         b=0; 
+         while (b<=n-1) {array1[b]=Convert.ToInt32 (Console.ReadLine ()); b++;};
+         b=0;
+         while (b<=n-1) {
+         if (b%2==1) {Console.WriteLine(array1[b]);};
+         b++;
+         }
+         b=0;
+         if (n%2==1) {
+         while (b<=n-1) {
+         if (b%2==0) {Console.WriteLine(array1[n-b-1]);}
+         b++;
+         } }
+         b=0;
+         if (n%2==0) {while (b<=n-1) {
+         if (b%2==0) {Console.WriteLine(array1[n-b]);}
+         b++;
+         } }
+        }
+    }
+}    
+
