@@ -120,3 +120,26 @@ namespace Лабораторная_работа_15._4
 }    
 
 Задание 5
+using System;
+
+namespace Лабораторная_работа_15._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int n,b, a;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите элементы массива A ");
+         b=0; 
+         while (b<=n-1) {array1[b]=Convert.ToInt32 (Console.ReadLine ()); b++;};
+         b=0;
+         a=array1[0];
+         while (b<=n-2) {if (array1[b]>array1[b+1]) {a=array1[b]; array1[b]=array1[b+1]; array1[b+1]=a;}; b++;};
+         b=0;
+         while (b<= n-1) {Console.Write (array1[b]); Console.Write(" "); b ++;};
+        }
+    }
+}    
