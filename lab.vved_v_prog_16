@@ -94,10 +94,84 @@ namespace Лабораторная_работа_16._2
 } 
 
 Задача  3
+using System;
+
+namespace Лабораторная_работа_16._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int n, b, i, j, a;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите элементы массива ");
+         b=0; 
+         while (b<=n-1) {array1[b]=Convert.ToInt32 (Console.ReadLine ()); b++;};
+         i=-1;
+         j=-1;
+         b=1;
+         a=array1[0];
+         while (b<= n-1) { if (array1[b]<a) {a=array1[b]; i=b;};b++;};
+         a=array1[0];
+         b=1;
+         while (b<= n-1) { if (array1[b]>a) {a=array1[b]; j=b;};b++;};
+         array1[i-1]=0;
+         array1[j+1]=0;
+         b=0;
+         while (b<= n-1) {Console.Write (array1[b]); Console.Write(" "); b++;};
+        }
+    }
+} 
 
 Задача  4
+using System;
+
+namespace Лабораторная_работа_16._4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int n, b;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите элементы массива ");
+         b=0; 
+         while (b<=n-1) {array1[b]=Convert.ToInt32 (Console.ReadLine ()); b++;};
+         b=0;
+         while (b<= n-2) { if (array1[b]<0) { array1[b+1]=0;};b++;};  
+         b=0;
+         while (b<= n-1) {Console.Write (array1[b]); Console.Write(" "); b++;};
+        }
+    }
+} 
 
 Задача  5
 
+using System;
+
+namespace Лабораторная_работа_16._5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         int n, b;
+         Console.WriteLine ("Введите размер массива ");
+         n = Convert.ToInt32 (Console.ReadLine ());
+         int []array1 = new int[n];
+         Console.WriteLine ("Введите элементы массива ");
+         b=0; 
+         while (b<=n-1) {array1[b]=Convert.ToInt32 (Console.ReadLine ()); b++;};
+         b=1;
+         while (b<= n-1) { if (array1[b]>0) { array1[b-1]=0;};b++;};  
+         b=0;
+         while (b<= n-1) {Console.Write (array1[b]); Console.Write(" "); b++;};
+        }
+    }
+} 
 
 
