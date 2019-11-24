@@ -1,0 +1,68 @@
+Задача  1
+
+using System;
+
+namespace Лабораторная_работа_16._1
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      int n,b,c,k,r;
+
+      Console.WriteLine ("Введите размер массива ");
+      n = Convert.ToInt32 (Console.ReadLine ());
+      int []array1 = new int[n];
+      c=n;
+      int []array2 = new int[c];
+      Console.WriteLine ("Введите элементы массива ");
+      b=0;
+      while (b<=n-1) {
+        array1[b]=Convert.ToInt32 (Console.ReadLine ()); 
+        b++;
+      }
+      b=0;
+      while (b<=n-2) { 
+      	if (array1[b]==array1[b+1]) {
+          c=c-1; 
+          b++;
+        }
+      b++;
+      }
+      b=0;
+      k=0;
+      r=c;
+      while (b<=n-2)
+       { 
+      	if (k<=c-1) 
+        { 
+          if (array1[b]!=array1[b+1]) 
+          {
+              array2[k]=array1[b]; 
+              k++;
+          } 
+        }
+        b++; 
+       }
+      b=0;
+      array2[k]=array1[n-1];
+      k=0;
+      c=r;
+      while (k< c-1) {
+      	Console.Write (array2[k]); 
+        Console.Write(" "); 
+        k ++;
+     }
+    }
+  }
+}
+Задача  2
+
+Задача  3
+
+Задача  4
+
+Задача  5
+
+
+
