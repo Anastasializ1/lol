@@ -1,0 +1,73 @@
+Задача  1
+using System;
+
+namespace Лабораторная_работа_17._1 {
+    class Program {
+        static void Main(string[] args) {
+            int n, b, l, k, i, f;
+            Console.WriteLine ("Введите размер массива ");
+            n = Convert.ToInt32 (Console.ReadLine ());
+            int []array1 = new int[n];
+
+            Console.WriteLine ("Введите элементы массива ");
+            b = 0;
+            while (b < n) {
+                array1[b]=Convert.ToInt32(Console.ReadLine());
+                b++;
+            }
+
+            l = 1;  // счетчик В массива
+            k = n; 
+            for (i = 0; i < n-1; i++) {
+                if (array1[i] == array1[i+1]) {
+                    k = k - 1; //нахождение размера нового массива
+                }
+            }
+
+            int []B = new int[k];
+            int []C = new int[k];
+
+            f = 0;
+            b = array1[0];
+            for (i = 1; i < n; i++) {
+                if (array1[i] == b) {
+                    l++;
+                    if (i+1 == n) {  
+                        B[k-1] = l;
+                        C[k-1] = b;
+                    }
+                } else {
+                    B[f] = l;
+                    C[f] = b;
+                    b = array1[i];
+                    f++;
+                    l = 1;
+                }
+            }
+
+            b = 0;
+            while (b < k) {
+                Console.Write(B[b]);
+                Console.Write(" ");
+                b++;
+            }
+            Console.WriteLine(" ");
+            b = 0;
+            while (b< k) {
+                Console.Write (C[b]);
+                Console.Write(" ");
+                b++;
+            }
+        }
+    }
+}
+Задача  2
+
+
+Задача  3
+
+
+Задача  4
+
+
+Задача  5
