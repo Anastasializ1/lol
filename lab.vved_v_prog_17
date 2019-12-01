@@ -132,7 +132,55 @@ namespace Лабораторная_работа_17._2 {
 }
 
 Задача  3
+using System;
 
+namespace  Лабораторная_работа_17._3 {
+    class Program {
+        static void Main(string[] args) {
+            int n, b, L, i, j, z, c, m;
+            Console.WriteLine ("Введите размер массива ");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int []array1 = new int[n];
+            int []now = new int[n];
+
+            Console.WriteLine("Введите элементы массива ");
+
+            for (i = 0; i < n; i++) {
+                array1[i]=Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Введите число");
+            L = Convert.ToInt32(Console.ReadLine());
+
+			 m = 1;
+			 b = 0;
+       z = 1;
+       c = -1;
+			 j = -1;//индексы нового массива
+			for (i = 1; i < n; i++) {
+				if (array1[i - 1] != array1[i]) {
+					m++;
+					if (m == L){ b = i;}
+					c = i;
+				}
+				if (m == L){ z++;}
+			}
+			for (i = 0; i < b; i++)  {j++; now[j] = array1[i];};
+
+			for (i = c; i < n; i++) {j++; now[j] = array1[i];};
+
+			for (i = b + z; i < c; i++)  {j++; now[j] = array1[i];};
+
+			for (i = b; i < b + z; i++)  {j++; now[j] = array1[i];};
+
+			for (i = 0; i < n; i++) {array1[i] = now[i];}
+
+            for (i = 0; i < n; i++) {
+                Console.WriteLine(now[i]);
+            }
+        }
+    }
+}
 
 Задача  4
 
