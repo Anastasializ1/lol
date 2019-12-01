@@ -142,3 +142,138 @@ namespace Лабораторная_работа_17._3 {
         }
     }
 } 
+
+
+using System;
+
+namespace _17._1 {
+    class Program {
+        static void Main(string[] args) {
+            int n, b, f, k, i, j, switchSer, curLength, curNum;
+            Console.WriteLine ("Введите размер массива ");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int []array1 = new int[n];
+
+            Console.WriteLine("Введите элементы массива ");
+
+            for (i = 0; i < n; i++) {
+                array1[i]=Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Введите число");
+            switchSer = Convert.ToInt32(Console.ReadLine());
+
+            k = n; 
+
+            for (i = 0; i < n-1; i++) {
+                if (array1[i] == array1[i+1]) {
+                    k = k - 1;
+                }
+            }
+
+            int []serialLen = new int[k];
+            int []serialNum = new int[k];
+
+            curNum = 0;
+            curLength = 0;
+            b = array1[0];
+            for (i = 0; i < n; i++) {
+                if (array1[i] == b) {
+                    curLength++;
+                } else {
+                    serialLen[curNum] = curLength;
+                    serialNum[curNum] = b;
+                    b = array1[i];
+                    curNum++;
+                    curLength = 1;
+                }
+                if (i+1 == n) {
+                    serialLen[serialLen.Length-1] = curLength;
+                    serialNum[serialNum.Length-1] = b;
+                }
+            }
+
+            if (switchSer+1 < serialNum.Length) {
+                serialNum[switchSer]+=serialNum[serialNum.Length-1];
+                serialNum[serialNum.Length-1] = serialNum[switchSer] - serialNum[serialNum.Length-1];
+                serialNum[switchSer] = serialNum[switchSer] - serialNum[serialNum.Length-1];
+
+                serialLen[switchSer]+=serialLen[serialLen.Length-1];
+                serialLen[serialLen.Length-1] = serialLen[switchSer] - serialLen[serialLen.Length-1];
+                serialLen[switchSer] = serialLen[switchSer] - serialLen[serialLen.Length-1];
+            }
+
+
+
+            int []newArr = new int[n];
+            b = 0;
+            for (i = 0; i < serialLen.Length; i++) {
+                for (j = 0; j < serialLen[i]; j++) {
+                    newArr[b++] = serialNum[i]; 
+                }
+            }
+
+            for (i = 0; i < newArr.Length; i++) {
+                Console.WriteLine("A[" + i + "]: " + newArr[i]);
+            }
+
+            for (i = 0; i < serialLen.Length; i++) {
+                Console.WriteLine("Len[" + i + "]: " + serialLen[i]);
+            }
+
+            for (i = 0; i < serialNum.Length; i++) {
+                Console.WriteLine("Num[" + i + "]: " + serialNum[i]);
+            }
+        }
+    }
+}
+
+using System;
+
+namespace _17._3 {
+    class Program {
+        static void Main(string[] args) {
+            int n, b, L, i, j, z, c, m;
+            Console.WriteLine ("Введите размер массива ");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int []array1 = new int[n];
+            int []now = new int[n];
+
+            Console.WriteLine("Введите элементы массива ");
+
+            for (i = 0; i < n; i++) {
+                array1[i]=Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Введите число");
+            L = Convert.ToInt32(Console.ReadLine());
+
+			 m = 1;
+			 b = 0;
+       z = 1;
+       c = -1;
+			 j = -1;//индексы нового массива
+			for (i = 1; i < n; i++) {
+				if (array1[i - 1] != array1[i]) {
+					m++;
+					if (m == L){ b = i;}
+					c = i;
+				}
+				if (m == L){ z++;}
+			}
+			for (i = 0; i < b; i++)  {j++; now[j] = array1[i];};
+
+			for (i = c; i < n; i++) {j++; now[j] = array1[i];};
+
+			for (i = b + z; i < c; i++)  {j++; now[j] = array1[i];};
+
+			for (i = b; i < b + z; i++)  {j++; now[j] = array1[i];};
+
+			for (i = 0; i < n; i++) {array1[i] = now[i];}
+
+            for (i = 0; i < n; i++) {
+                Console.WriteLine(now[i]);
+            }
+        }
+    }
+}
