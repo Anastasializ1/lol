@@ -64,3 +64,81 @@ namespace Лабораторная_работа_17._2 {
         }
     }
 }
+
+
+
+
+
+
+using System;
+
+namespace Лабораторная_работа_17._3 {
+    class Program {
+        static void Main(string[] args) {
+            int n, l, i, c, b,k,y,r,a;
+            Console.WriteLine ("Введите размер массива ");
+            n = Convert.ToInt32 (Console.ReadLine ());
+            int []array1 = new int[n];
+            int []now = new int[n];
+
+            Console.WriteLine ("Введите элементы массива ");
+            i = 0;
+            while (i < n) {
+                array1[i]=Convert.ToInt32(Console.ReadLine()); // ввод элементов массива
+                i++;
+            }
+            Console.WriteLine ("Введите число ");
+            l = Convert.ToInt32 (Console.ReadLine ());
+
+			b = 1;
+			c = 0;//счетчик элементов нового массива
+      a = 0;//счетчик последовательностей 
+      k = -1;//номер первого элемента в заменяемой последовательности
+      r = -1;//номер последнего/первого элемента последней последовательности
+      for (i = 1; i < n; i++)
+			{
+	      if (array1[i-1] == array1[i]) { a++;}
+        if (a==l) {k=i-1;}
+      }
+      for (i = 1; i< n; i++)
+			{
+	      if (array1[i-1] == array1[i]) { r=i;}
+      }
+        b = array1[r];
+        i = n;
+	      while (array1[i] == b) { l=i; i--;}
+       c=0;
+			for (i = 0; i < k; i++)
+			{
+        now[c]=array1[i];
+        c++;
+      }
+      i = k; 
+      y=0;
+      while ((i<= r)&&(i>=l))
+			{
+        now[c]=array1[i];
+	      i++;
+        c++;
+        y++;
+      }
+	    for (i = k+y; i < r; i++)
+			{
+        now[c]=array1[i];
+        c++;
+      } 
+       for (i = r; i < n; i++)
+			{
+        now[c]=array1[i];
+        c++;
+      }
+			
+            i=0;
+            while (i< c) {
+                Console.Write (now[i]);
+                Console.Write(" ");
+                i++;
+            }
+        }
+    }
+} 
