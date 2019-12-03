@@ -1,0 +1,270 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_18._1 {
+    class Program {
+        static void Main(string[] args) {
+            int n, i, j, b, c, a ;
+            
+            Console.WriteLine ("Введите размер матрицы ");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[n,n];
+
+            Console.WriteLine("Введите точки ");
+
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            a=0;
+            b=1;
+            c=2;
+            for (i = 0; i < n; i++)
+            {
+                for ( j = a; j < n-a; j++)
+                {
+                    Console.Write(x[a, j] + " ");
+                }
+                for ( j = b; j < n-a; j++)
+                {
+                    Console.Write(x[j, n - b] + " ");
+                }
+                for ( j = n - c; j >= a; j--)
+                {
+                    Console.Write(x[n - b, j] + " ");
+                }
+                for ( j =( n - c); j > a; j--)
+                {
+                    Console.Write(x[j, a] + " ");
+                }
+                a++;
+                b++;
+                c++;
+            }
+
+        }
+    }
+}
+Задание 2
+using System;
+
+namespace Лабораторная_работа_18._2 {
+    class Program {
+        static void Main(string[] args) {
+            int n, i, j, k, m, sum, pr;
+            
+            Console.WriteLine ("Введите количество строк");
+            m = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[m,n];
+
+            Console.WriteLine("Введите числа ");
+
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+           Console.WriteLine("Вывод матрицы ");
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            Console.WriteLine ("Введите строкy");
+            k = Convert.ToInt32 (Console.ReadLine());
+            sum=0;
+            pr=1;
+            i=k-1;
+                for ( j = 0; j < n; j++)
+                {
+                 sum=sum+x[i,j];
+                 pr=pr*x[i,j];
+                }
+
+               Console.WriteLine ("Сумма строки "+k+ ": "+ sum);
+               Console.WriteLine ("Произведение строки "+k+ ": "+ pr);
+            }
+        }
+    }
+Задание 3
+using System;
+
+namespace Лабораторная_работа_18._3 {
+    class Program {
+        static void Main(string[] args) {
+            int n, i, j, m, a, l, pr;
+            
+            Console.WriteLine ("Введите количество строк");
+            m = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[m,n];
+
+            Console.WriteLine("Введите числа ");
+
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+           Console.WriteLine("Вывод матрицы ");
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            a=1;            
+            for ( i = 0; i < m; i++)
+                 { 
+                  a=a*x[i,0];
+                }
+            pr=a;
+            l=0;
+                for ( j = 0; j < n; j++)
+                {
+                  for ( i = 0; i < m; i++)
+                 { 
+                  pr=pr*x[i,j];
+                 }
+                if (pr<a) {a=pr; l=j;}
+                else {l=0;}
+                pr=1;
+                }
+               l=l+1;
+               Console.WriteLine ("Наименьшее произведение в столбце  "+l+ " равно : "+ a);
+            }
+        }
+    }
+Задание 4
+using System;
+
+namespace Лабораторная_работа_18._4 {
+    class Program {
+        static void Main(string[] args) {
+            int n, i, j, m, l, count;
+            double k;
+            
+            Console.WriteLine ("Введите количество строк");
+            m = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[m,n];
+
+            Console.WriteLine("Введите числа ");
+
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+           Console.WriteLine("Вывод матрицы ");
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+          
+            k=0;// среднее арифметическое
+            count=0;//количество элементов удовлетворяющих условию
+                for ( j = 0; j < n; j++)
+                {
+                  for ( i = 0; i < m; i++)
+                 { 
+                  k=k+x[i,j];
+                 }
+                 k=k/m;
+                 for ( i = 0; i < m; i++)
+                 { 
+                  if (k<x[i,j]) {count++;}
+                 }
+                 l=j+1;
+                 Console.WriteLine ("Количество элементов больше стреднего арифметического в столбце  "+l+ " равно : "+ count);
+                 count=0;
+                 k=0;
+                }
+            }
+        }
+    }
+Задание 5
+using System;
+
+namespace Лабораторная_работа_18._5 {
+    class Program {
+        static void Main(string[] args) {
+            int n, i, j, m, l, k;
+            
+            Console.WriteLine ("Введите количество строк");
+            m = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[m,n];
+
+            Console.WriteLine("Введите числа ");
+
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+           Console.WriteLine("Вывод матрицы ");
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+          
+            k=-1;// НОМЕР СТОЛБЦА С НЕЧЕТНЫМИ ЭЛЕМЕНТАМИ
+            l=0; 
+                for ( j = n-1; (j >-1); j--)
+                {
+                  for ( i = 0; i < m; i++)
+                 { 
+                  if (x[i,j]%2==1) {l++;}
+                 }
+                 if (l==m) {k=j+1;}
+                 l=0;
+                 
+                }
+                 Console.WriteLine ("столбец :  "+k);
+            }
+        }
+    }
