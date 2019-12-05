@@ -1,0 +1,105 @@
+Задание 1
+using System;
+
+namespace Лабораторная_работа_20._1 {
+    class Program {
+        static void Main(string[] args) {
+            char  k;
+            Console.WriteLine ("Введите букву");
+            k = Convert.ToChar(Console.ReadLine());
+            Console.WriteLine ((char)((int)k - 1) + "<"+ k+"<" + (char)((int)k + 1));
+            }
+        }
+    }
+Задание 2
+using System;
+
+namespace Лабораторная_работа_20._2 {
+    class Program {
+        static void Main(string[] args) {
+            string str;
+            Console.WriteLine ("Введите текст");
+            str = Convert.ToString(Console.ReadLine());
+
+            foreach ( char ch in str )
+            {
+                Console.Write(ch + " ");
+            }
+
+            }
+        }
+    }
+Задание 3
+using System;
+
+namespace Лабораторная_работа_20._3 {
+    class Program {
+        static void Main(string[] args) {
+            string str;
+            int k;
+            Console.WriteLine ("Введите строку");
+            str = Convert.ToString(Console.ReadLine());
+            k=0;
+            foreach ( char ch in str )
+            {
+             if (((int)ch>=65)&&((int)ch<=90)) {k++;}
+            }
+            Console.WriteLine ("Коичество пописных латинских букв:");
+            Console.WriteLine(k);
+            }
+        }
+    }
+Задание 4
+using System;
+
+namespace Лабораторная_работа_20._4 {
+    class Program {
+        static void Main(string[] args) {
+            string str, help, str1;
+            char c;
+            Console.WriteLine ("Введите строку");
+            str = Convert.ToString(Console.ReadLine());
+            Console.WriteLine ("Введите букву");
+            c = Convert.ToChar(Console.ReadLine());
+            help=Convert.ToString(c);
+
+            str1="";
+            foreach ( char ch in str )
+            {
+             if (help.IndexOf(ch)>-1) {str1=str1+ new string(ch,2);}
+             else {
+               str1=str1+ch;
+             }
+            }
+            Console.Write(str1);
+            }
+        }
+    }
+Задание 5
+using System;
+
+namespace Лабораторная_работа_20._5 {
+    class Program {
+        static void Main(string[] args) {
+            string str, str2;
+            int i,x,count;
+            Console.WriteLine ("Введите 1 строку");
+            str = Convert.ToString(Console.ReadLine());
+            Console.WriteLine ("Введите 2 строку");
+            str2 = Convert.ToString(Console.ReadLine());            
+
+           i = 0;  // Числовая переменная, контролирующая итерации цикла
+           x = -1; // Так как метод IndexOf() возвращает "-1" если первое вхождение подстроки не найдено, то приходится использовать вспомагательную, вместо і, что б начать цикл
+           count = -1; // Записываем количество вхождений. -1 т.к. первое вхождение в пустую
+
+            while(i != -1)  
+            {
+                i = str.IndexOf(str2,x+1); // получаем индекс первого вхождения  х+1 говорит, что начинать нужно с 0-го индекса
+                x = i; // соответственно присваиваем номер индекса первого значения, что б потом (х+1) начать со следующего
+                count++; 
+            }
+           
+            Console.WriteLine(count);
+            }
+        }
+    }
