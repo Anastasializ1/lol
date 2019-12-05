@@ -4,7 +4,7 @@ using System;
 namespace Лабораторная_работа_18._1 {
     class Program {
         static void Main(string[] args) {
-            int n, i, j, b, c, a ;
+            int n, i, j, k ;
             
             Console.WriteLine ("Введите размер матрицы ");
             n = Convert.ToInt32 (Console.ReadLine());
@@ -29,35 +29,34 @@ namespace Лабораторная_работа_18._1 {
                 }
                 Console.WriteLine(" ");
             }
-            a=0;
-            b=1;
-            c=2;
-            for (i = 0; i < n; i++)
+            for (k = 0; k < (n / 2 + 1); k++)
+           {
+            for (i = k; i < n - k; i++)
+           {
+           Console.Write(x[i, k] + " ");
+           }
+           i--;
+           for (j = k + 1; j < n - k; j++)
+           {
+           Console.Write(x[i, j] + " ");
+           }
+           j--;
+           for (i = n - k - 2; i >= k; i--)
             {
-                for ( j = a; j < n-a; j++)
-                {
-                    Console.Write(x[a, j] + " ");
-                }
-                for ( j = b; j < n-a; j++)
-                {
-                    Console.Write(x[j, n - b] + " ");
-                }
-                for ( j = n - c; j >= a; j--)
-                {
-                    Console.Write(x[n - b, j] + " ");
-                }
-                for ( j =( n - c); j > a; j--)
-                {
-                    Console.Write(x[j, a] + " ");
-                }
-                a++;
-                b++;
-                c++;
+            Console.Write(x[i, j] + " ");
             }
+            i++;
+            for (j = n - k - 2; j > k; j--)
+            {
+            Console.Write(x[i, j] + " ");
+            }
+            j++;
+            }
+      }
 
-        }
-    }
+   }
 }
+    
 Задание 2
 using System;
 
