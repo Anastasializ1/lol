@@ -1,0 +1,328 @@
+Задание 1
+
+using System;
+
+namespace Лабораторная_работа_19._1 {
+    class Program {
+        static void Main(string[] args) {
+            int n, m, i, j, c, min, max ;
+            
+            Console.WriteLine ("Введите количество строк");
+            m = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            n = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[m,n];
+
+            Console.WriteLine("Введите точки ");
+
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            min = 0;
+
+            max = 0;
+          for (i = 0; i < m; i++){
+
+          for (j = 0; j < n ; j++){
+
+          if (x[i, j] < x[i, min]) min = j;
+
+          if (x[i, j] > x[i, max]) max = j;
+          }
+
+          c = x[i, min];
+          x[i, min] = x[i, max];
+
+          x[i, max] = c;
+          }
+
+          Console.WriteLine("Преобразованная матрица: ");
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+
+       }
+   }
+}
+Задание 2
+
+using System;
+
+namespace Лабораторная_работа_19._2 {
+    class Program {
+        static void Main(string[] args) {
+            int n, m, i, j, c, d, b, min, max ;
+            
+            Console.WriteLine ("Введите количество строк");
+            n = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            m = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[n,m];
+            b=-1;
+            d=-1;
+            Console.WriteLine("Введите точки ");
+
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Массив ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            min = 9999999;
+            max = -9999999;
+           for (i = 0; i < n; i++) 
+          {
+           for (j = 0; j < m; j++) 
+          {
+           if (x[i,j] < min){
+           min = x[i,j];
+           d = j;
+          }
+          
+          if (x[i,j] > max)
+          {
+           max = x[i,j];
+           b = j;
+             }
+            }
+           }
+
+          for (i = 0; i < n; i++) 
+          {
+           c = x[i,b];
+           x[i,b] = x[i,d];
+           x[i,d] = c;
+          }
+          
+          Console.WriteLine("Преобразованная матрица: ");
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+
+       }
+   }
+}
+Задание 3
+
+using System;
+
+namespace Лабораторная_работа_19._3 {
+    class Program {
+        static void Main(string[] args) {
+            int n, m, i, j, c ;
+            
+            Console.WriteLine ("Введите количество строк");
+            n = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            m = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[n,m];
+
+            Console.WriteLine("Введите точки ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Массив ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            
+              for (i = 0; i < n / 2; i++)
+              {
+               for (j = 0; j < m / 2; j++)
+               {
+               c = x[i,j];
+               x[i,j] = x[n / 2 + i,m / 2 + j];
+               x[n / 2 + i,m / 2 + j] = c;
+               }
+              }
+
+          Console.WriteLine("Преобразованная матрица: ");
+
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+
+       }
+   }
+}
+Задание 4
+
+using System;
+
+namespace Лабораторная_работа_19._4 {
+    class Program {
+        static void Main(string[] args) {
+            int n, m, i, j, c, k;
+            
+            Console.WriteLine ("Введите количество строк");
+            n = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            m = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[n,m];
+
+            Console.WriteLine("Введите точки ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Массив ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            
+             for (k = 0; k < n; k++)
+               {
+               for (i = 1; i < n; i++)
+               {
+                if (x[i - 1,0] > x[i,0])
+                for (j = 0; j < m; j++)
+                {
+                 c = x[i - 1,j];
+                 x[i - 1,j] = x[i,j];
+                 x[i,j] = c;
+                }
+               } 
+              }
+
+          Console.WriteLine("Преобразованная матрица: ");
+            for ( i = 0; i < m; i++)
+            {
+                for ( j = 0; j < n; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+
+       }
+   }
+}
+Задание 5
+
+using System;
+
+namespace Лабораторная_работа_19._5 {
+    class Program {
+        static void Main(string[] args) {
+            int n, m, i, j, c, k;
+            
+            Console.WriteLine ("Введите количество строк");
+            n = Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine ("Введите количество стоблцов");
+            m = Convert.ToInt32 (Console.ReadLine());
+            int [,]x = new int[n,m];
+
+            Console.WriteLine("Введите точки ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    x[i, j] = Convert.ToInt32 (Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Массив ");
+
+            for ( i = 0; i < n; i++)
+            {
+                for ( j = 0; j < m; j++)
+                {
+                    Console.Write(x[i, j] + " ");
+                }
+                Console.WriteLine(" ");
+            }
+
+              int[] y = new int[m * 2 - 1];
+
+              c = m;
+              int sum = 0;
+              for (k = 0; k < m * 2 - 1; k++)
+              {
+               for (i = 0; i < m; i++)
+               {
+                for (j = 0; j < m; j++)
+                {
+                 if (i == j + c - 1)
+                 {
+                  sum += x[i,j];
+                 }
+                }
+               }
+              y[k] = sum;
+              sum = 0;
+              c--;
+              }
+
+        Console.WriteLine("Суммы элементов диагоналей: " ); for (k = 0; k < m * 2 - 1; k++)
+
+        Console.WriteLine("Сумма элементов " +( k + 1) + "-й диагонали: " + y[k]
+);
+
+       }
+   }
+}
+
