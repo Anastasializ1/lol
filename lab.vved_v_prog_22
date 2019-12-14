@@ -1,0 +1,123 @@
+Задание 1
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace _22_vvp
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ string fileName = @"C:\Users\ACER\Desktop\22.1vvp.txt"; 
+ string text = File.ReadAllText(fileName);
+ text = text.Substring(text.IndexOf(' ') + 1);
+ File.WriteAllText(fileName, text); 
+ }
+ }
+}
+Задание 2
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace _22_vvp
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ string fileName = @"C:\Users\ACER\Desktop\22.2vvp.txt";
+ Console.WriteLine("Введите N: "); 
+ int n =Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Введите K: "); 
+ int k =Convert.ToInt32(Console.ReadLine());
+ IEnumerable<string> 
+ s = Enumerable.Range(1, k).Select(v => "*"); 
+ for (int i = 0; i < n; i++) 
+ {
+ File.AppendAllText(fileName, String.Join("", s)); 
+ File.AppendAllText(fileName, Environment.NewLine);
+ }
+ }
+ }
+}
+Задание 3
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace _22_vvp
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ string file1 = File.ReadAllText(@"C:\Users\ACER\Desktop\22.3.1vvp.txt");
+ StreamWriter sw = new StreamWriter(@"C:\Users\ACER\Desktop\22.3.1vvp.txt");
+ string file2 =File.ReadAllText(@"C:\Users\ACER\Desktop\22.3.2vvp.txt");
+ sw.Write(file2);
+ sw.Write(file1);
+ sw.Close(); 
+ }
+ }
+}
+
+Задание 4
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace _22_vvp
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ string s = @"C:\Users\ACER\Desktop\22.4vvp.txt"; 
+ string text = File.ReadAllText(s); 
+ File.WriteAllText(s, "");
+ char[] f = new char[] { ' ' }; 
+ string[] ss = text.Split(f, StringSplitOptions.RemoveEmptyEntries);
+ for (int i = 0; i < ss.Length; i++) 
+ {
+ File.AppendAllText(s, (ss[i] + " ")); 
+ }
+ }
+ }
+}
+Задание 5
+
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace _22_vvp
+{
+ class Program
+ {
+ static void Main(string[] args)
+ {
+ string s = @"C:\Users\ACER\Desktop\22.5vvp.txt";
+ string Text = File.ReadAllText(s);
+ string[] Lines = Text.Split(new string[] { " " },
+StringSplitOptions.RemoveEmptyEntries);
+ Console.WriteLine("Количество абзацев: " + Lines.Length.ToString()); 
+ Console.ReadKey();
+ }
+ }
+}
